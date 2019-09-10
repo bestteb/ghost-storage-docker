@@ -1,5 +1,11 @@
 # Testing Notes
 
+### Pre-reqs:
+- Docker
+- npm/node
+- Azure Storage Account
+- Update `config.development.json` with storage account connection string
+
 There are two projects:
 - This one (Used to test the storage adapter in a container instance of Ghost)
 - [Ghost-Azurestorage](https://github.com/jldeen/ghost-azurestorage) (The actual storage adapter)
