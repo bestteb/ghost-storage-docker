@@ -18,6 +18,10 @@ Now, from within this project (ghost-storage-docker) run:
 
 `docker run --name ghost -p 8085:2368 -e url=http://localhost:8085 ghost-azure-test` (This will run the container)
 
+You can also try to mount your local working directory to your container using the following command. You will have to update the home user dir accordingly. (Also assumes macOS setup)
+
+`docker run --name ghost -p 8085:2368 -v /Users/user-here/path-here/ghost-storage-docker/content:/var/lib/ghost/content -e url=http://localhost:8085 ghost-azure-test:latest`
+
 ## Testing within the container
 Once the container is up, you will need to create a login to get to the admin panel. From there you can navigate to posts. Start from `http://localhost:8085/admin` and click "create account"
 
