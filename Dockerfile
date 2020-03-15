@@ -1,16 +1,9 @@
 FROM ghost:3.11-alpine
 
-# set url-hostname for Ghost with build arg
-ARG mode
-ENV devMode ${mode}
-ENV url ""
 
 # copy config.production.json with db
-COPY config.${devMode}.json config.production.json
+COPY config.json config.production.json
 
-
-# copy redirects
-COPY redirects.json content/data
 
 # Install Azure Storage
 RUN npm install ghost-storage-azure
