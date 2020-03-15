@@ -1,4 +1,4 @@
-FROM ghost:2.30.2-alpine as BUILD
+FROM ghost:3.11-alpine as BUILD
 
 # Add necessary packages for Sharp to work
 RUN apk add --update --no-cache gcc g++ make libc6-compat python python3
